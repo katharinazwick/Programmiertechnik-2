@@ -1,0 +1,61 @@
+{
+    "configurations": [
+        {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/out/tests",
+            "args": [
+                "--test-case=${input:test_cases}"
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "Build Tests",
+            "setupCommands": [
+                {
+                    "description": "Enable breaking on exceptions.",
+                    "text": "break set -E C++",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/out/tests",
+            "args": [
+                "--test-case=\"${input:test_cases}\""
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+            ],
+            "preLaunchTask": "Build Tests"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "test_cases",
+            "type": "pickString",
+            "description": "Test Cases",
+            "options": [
+                "*", // add the other test case matchers here, make sure to match them with the ones in launch.json
+                "A1*", // add the other test case matchers here, make sure to match them with the ones in launch.json
+                "A2*", // add the other test case matchers here, make sure to match them with the ones in launch.json
+                "A3*", // add the other test case matchers here, make sure to match them with the ones in launch.json
+            ]
+        }
+    ]
+}
