@@ -1,0 +1,2 @@
+Bei anderen Daten, ließe sich dieser Comparator leicht durch eine alternative Implementierung ersetzen. Diese Konstruktion soll auch als Beispiel für das "Composition over Inheritance" Paradigma dienen, nachdem funktionelle Erweiterung
+bei objektorientierten Sprachen am Besten durch Komposition mehrerer Objekte und nicht durch vererben/überschreiben erreicht wird.

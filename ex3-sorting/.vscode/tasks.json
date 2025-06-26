@@ -1,0 +1,97 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "C/C++: clang++ build active file",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-std=c++17", // C++17 standard
+        "-g", // enable lldb debugging
+        "${file}",
+        "-o",
+        "${workspaceFolder}/out/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build",
+      "detail": "compiler: /usr/bin/clang++"
+    },
+    {
+      "type": "shell",
+      "label": "Run Active C++ File",
+      "command": "${workspaceFolder}/out/${fileBasenameNoExtension}",
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "dependsOn": [
+        "C/C++: clang++ build active file"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "Build Tests",
+      "command": "make tests",
+      "options": {
+        "cwd": "${workspaceFolder}/.vscode"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build",
+    },
+    {
+      "type": "shell",
+      "label": "Build Tests",
+      "command": "make tests",
+      "options": {
+        "cwd": "${workspaceFolder}/.vscode"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build",
+    },
+    {
+      "type": "shell",
+      "label": "Run Tests",
+      "command": "${workspaceFolder}/out/tests --test-case=\"${input:test_cases}\"",
+      "options": {
+        "cwd": "${workspaceFolder}/.vscode"
+      },
+      "dependsOn": [
+        "Build Tests"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "Make Clean",
+      "command": "make clean",
+      "options": {
+        "cwd": "${workspaceFolder}/.vscode"
+      },
+      "dependsOn": [],
+      "problemMatcher": []
+    },
+  ],
+  "inputs": [
+    {
+      "id": "test_cases",
+      "type": "pickString",
+      "description": "Test Cases",
+      "options": [
+        "*", // add the other test case matchers here, // add the other test case matchers here, make sure to match them with the ones in launch.json
+        "A1*",
+        "A2*",
+        "A3*"
+      ]
+    }
+  ]
+}
