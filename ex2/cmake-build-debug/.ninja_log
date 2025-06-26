@@ -1,0 +1,11 @@
+# ninja log v6
+24	1905	7689256988407540	CMakeFiles/ex2_datastructures_team_44.dir/src/coins.cpp.obj	2343554da810f265
+20	797	7692868971406695	CMakeFiles/ex2_datastructures_team_44.dir/src/repl.cpp.obj	5d1b0822f09fadaa
+9	671	7692868971293755	CMakeFiles/ex2_datastructures_team_44.dir/src/arithmetic.cpp.obj	142cc85c1f69d255
+556	1033	7692868976767278	CMakeFiles/ex2_datastructures_team_44.dir/tests/test_set_impl.cpp.obj	1ab39372ed392dac
+34	826	7692868971547717	CMakeFiles/ex2_datastructures_team_44.dir/tests/test_arithmetic.cpp.obj	4fc1aee2fdc24e53
+5	500	7692871670861868	CMakeFiles/ex2_datastructures_team_44.dir/src/set_operations.cpp.obj	51ffb5f228915d4f
+17	615	7692871670974251	CMakeFiles/ex2_datastructures_team_44.dir/tests/test_set_operations.cpp.obj	abba64d7c7487481
+797	1219	7692868979172335	CMakeFiles/ex2_datastructures_team_44.dir/tests/test_stack_impl.cpp.obj	acb9a412a35b7216
+24	4187	7692871671045138	CMakeFiles/ex2_datastructures_team_44.dir/tests/tests.cpp.obj	9f845f0a6d7da840
+3	326	7696261067123328	build.ninja	72164ed29ffc0437

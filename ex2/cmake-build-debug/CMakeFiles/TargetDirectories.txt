@@ -1,0 +1,3 @@
+C:/Users/katha/Downloads/pt/ex2-datastructures-team_44/cmake-build-debug/CMakeFiles/ex2_datastructures_team_44.dir
+C:/Users/katha/Downloads/pt/ex2-datastructures-team_44/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/katha/Downloads/pt/ex2-datastructures-team_44/cmake-build-debug/CMakeFiles/rebuild_cache.dir
