@@ -1,0 +1,4 @@
+C:\Users\katha\AppData\Local\Programs\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=C:/Users/katha/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S C:\Users\katha\Downloads\pt\ex1-cplusplusintro-team_44 -B C:\Users\katha\Downloads\pt\ex1-cplusplusintro-team_44\cmake-build-debug
+-- Configuring done (0.4s)
+-- Generating done (0.2s)
+-- Build files have been written to: C:/Users/katha/Downloads/pt/ex1-cplusplusintro-team_44/cmake-build-debug

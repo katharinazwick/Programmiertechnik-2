@@ -1,0 +1,70 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "cppbuild",
+      "label": "C/C++: clang++ build active file",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-fdiagnostics-color=always",
+        "-std=c++17", // C++17 standard
+        "-g", // enable lldb debugging
+        "${file}",
+        "-o",
+        "${workspaceFolder}/out/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "build",
+      "detail": "compiler: /usr/bin/clang++"
+    },
+    {
+      "type": "shell",
+      "label": "Run Active C++ File",
+      "command": "${workspaceFolder}/out/${fileBasenameNoExtension}",
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "dependsOn": [
+        "C/C++: clang++ build active file"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "Run Tests",
+      "command": "make tests && ${workspaceFolder}/out/tests --test-case=\"${input:test_cases}\"",
+      "options": {
+        "cwd": "${workspaceFolder}/.vscode"
+      },
+      "dependsOn": [],
+      "problemMatcher": []
+    },
+    {
+      "type": "shell",
+      "label": "Make Clean",
+      "command": "make clean",
+      "options": {
+        "cwd": "${workspaceFolder}/.vscode"
+      },
+      "dependsOn": [],
+      "problemMatcher": []
+    },
+  ],
+  "inputs": [
+    {
+      "id": "test_cases",
+      "type": "pickString",
+      "description": "Test Cases",
+      "options": [
+        "*",
+        "A1:*",
+        "A2:*"
+      ]
+    }
+  ]
+}

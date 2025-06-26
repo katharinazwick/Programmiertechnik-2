@@ -1,0 +1,21 @@
+1. Binärdatei grading_results.db einlesen und in einer einfach verketteten Liste speichern.
+
+Iterator-Schnittstelle implementieren.
+
+Destruktor schreibt die Liste sauber zurück in den Speicher.
+
+Begin/End Iterator-Methoden einbauen.
+
+2. Zwei Arten von TaskAgents:
+
+IteratingTaskAgent: traversiert die Liste und ruft visit() für jedes Element auf.
+
+ReducingTaskAgent: traversiert die Liste und ruft reduce() auf, um Werte zu aggregieren.
+
+performTask():
+
+Bei IteratingTaskAgent: visitAll() aufrufen.
+
+Bei ReducingTaskAgent: reduceAll() aufrufen und Ergebnis ausgeben.
+
+Die Methoden visitAll() und reduceAll() sollen eine Schleife über die Liste machen.
